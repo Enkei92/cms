@@ -1,0 +1,60 @@
+class PostsController < ApplicationController
+
+  before_action :set_post, only: [ :show, :edit, :update, :destroy]
+
+  def index
+    @posts = Post.all.order(priority: :desc)
+  end
+
+  def show
+  end
+
+  def new
+    @post = Post.new
+  end
+
+  def create
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to @post
+    else
+      render :new
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @post.update_attributes(post_params)
+      redirect_to @post
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @post.destroy
+    redirect_to posts_path
+  end
+
+    def published
+    @posts = Post.published
+  end
+
+  def unpublished
+    @posts = Post.unpublished
+  end
+
+
+  private
+
+  def set_post
+    @post = Post.find_by(slug: params[:slug])
+  end
+
+
+  def post_params
+    params.require(:post).permit(:title, :description, :slug, :menu_label, :h1, :content, :priority, :published_at)
+  end
+end

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Anadea</title>
+    <%= display_meta_tags site: 'Anadea Test Task' %>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,11 @@
   </head>
 
   <body>
+
+    <%= link_to 'Home page', posts_path %>
+    <%= link_to 'New page', new_post_path %>
+
     <%= yield %>
+
   </body>
 </html>
