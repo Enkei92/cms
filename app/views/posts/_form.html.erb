@@ -1,52 +1,49 @@
 <%= form_for @post do |f| %>
-  <div class="form-control">
+  <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
 
-  <div class="form-control">
+  <div class="form-group">
     <%= f.label :description %>
-    <%= f.text_field :description %>
+    <%= f.text_field :description, class: 'form-control' %>
   </div>
 
-  <div class="form-control">
+  <div class="form-group">
     <%= f.label :slug %>
-    <%= f.text_field :slug %>
+    <%= f.text_field :slug, class: 'form-control' %>
   </div>
 
-  <div class="form-control">
+  <div class="form-group">
     <%= f.label :menu_label %>
-    <%= f.text_field :menu_label %>
+    <%= f.text_field :menu_label, class: 'form-control' %>
   </div>
 
-  <div class="form-control">
+  <div class="form-group">
     <%= f.label :h1 %>
-    <%= f.text_field :h1 %>
+    <%= f.text_field :h1, class: 'form-control' %>
   </div>
 
-  <div class="form-control">
+  <div class="form-group">
     <%= f.label :content %>
-    <%= f.text_area :content %>
+    <%= f.text_area :content, class: 'form-control' %>
   </div>
 
-  <div class="form-control">
+  <div class="form-group">
     <%= f.label :priority %>
-    <%= f.text_field :priority %>
+    <%= f.text_field :priority, class: 'form-control' %>
   </div>
 
-  <div class="form-control">
+  <div class="form-group">
     <%= f.label :published_at %>
-    <%= f.datetime_field :published_at %>
+    <%= f.datetime_field :published_at, class: 'form-control' %>
   </div>
 
   <%= f.error_messages %>
 
-  <div class="form-control">
-    <%= f.submit "Save" %>
-  </div>
-
-  <div class="form-control">
-    <%= link_to "Cancel", posts_path %>
+  <div class="form-group">
+    <%= f.submit "Save", class: 'btn btn-primary' %>
+    <%= link_to "Cancel", posts_path, class: 'btn btn-outline-primary' %>
   </div>
 
 <% end %>

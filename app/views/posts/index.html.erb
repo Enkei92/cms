@@ -1,11 +1,11 @@
 <h1> Posts </h1>
 
 <% @posts.published.each do |post| %>
-  <h2><%= link_to post.menu_label, post_path(slug: post.slug) %></h2>
+  <h4><%= link_to post.menu_label, post_path(slug: post.slug) %></h4>
 <% end %>
 
 <h2> Unpublished posts </h2>
 <% @posts.unpublished.each do |post| %>
-  <h2><%= link_to post.menu_label, post_path(slug: post.slug) %></h2>
+  <h4><%= link_to post.menu_label, post_path(slug: post.slug) %></h4>
 <% end %>
 

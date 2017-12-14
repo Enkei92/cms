@@ -6,7 +6,7 @@ class Post < ApplicationRecord
   validates :menu_label, presence: true, uniqueness: true, length: { minimum: 1, maximum: 50 }
   validates :h1, presence: true, uniqueness: true, length: { minimum: 5, maximum: 50 }
   validates :content, presence: true, length: { minimum: 10, maximum: 1200 }
-  validates :priority, presence: true, numericality: { minimum: 1, maximum: 10 }
+  validates :priority, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 1, less_than_or_equal_to: 10 }
   validates :published_at, presence: true,
               date: { after: Proc.new { Time.now - 1.year},
                       before: Proc.new { Time.now + 1.year } }
