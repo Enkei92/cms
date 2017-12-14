@@ -4,6 +4,7 @@
   <h2><%= link_to post.menu_label, post_path(slug: post.slug) %></h2>
 <% end %>
 
+<h2> Unpublished posts </h2>
 <% @posts.unpublished.each do |post| %>
   <h2><%= link_to post.menu_label, post_path(slug: post.slug) %></h2>
 <% end %>

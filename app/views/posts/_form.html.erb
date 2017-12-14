@@ -6,7 +6,7 @@
 
   <div class="form-control">
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_field :description %>
   </div>
 
   <div class="form-control">
@@ -38,6 +38,8 @@
     <%= f.label :published_at %>
     <%= f.datetime_field :published_at %>
   </div>
+
+  <%= f.error_messages %>
 
   <div class="form-control">
     <%= f.submit "Save" %>
