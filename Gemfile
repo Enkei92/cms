@@ -36,6 +36,9 @@ gem 'meta-tags'
 gem 'date_validator'
 gem 'dynamic_form'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'tinymce-rails', '4.6.5'
+gem 'tinymce-rails-imageupload', github: 'PerfectlyNormal/tinymce-rails-imageupload', ref: '34a105e77f1746913b8989ad67b75c6f9bc4e8c8'
+gem 'paperclip'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

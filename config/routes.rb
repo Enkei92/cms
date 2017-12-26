@@ -7,4 +7,6 @@ Rails.application.routes.draw do
       get :unpublished
     end
   end
+
+  post '/tinymce_assets' => 'tinymce_assets#create'
 end

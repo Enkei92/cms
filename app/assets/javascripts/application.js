@@ -16,3 +16,5 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require toggle
+//= require tinymce
+//= require_self
