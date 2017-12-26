@@ -38,15 +38,6 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
-    def published
-    @posts = Post.published
-  end
-
-  def unpublished
-    @posts = Post.unpublished
-  end
-
-
   private
 
   def set_post
